@@ -1,7 +1,10 @@
-import { Routes } from '@angular/router';
-import { HospitalComponent } from '../../intermedio2/hospital/hospital.component';
+import { MedicoComponent } from './../../intermedio2/medico/medico.component';
+import { RUTAS } from './app.routes';
+describe('Rutas principales', () => {
 
+  it('Debe de existir la ruta /medico/id:', () => {
+    expect(RUTAS).toContain({ path: 'medico/:id', component: MedicoComponent },);
+  });
 
-export const RUTAS: Routes = [
-  { path: 'hospital', component: HospitalComponent }
-]
+})
+
